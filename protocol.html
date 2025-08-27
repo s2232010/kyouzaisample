@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>教材sample</title>
+  <link href="css/kadai.css" rel="stylesheet" type="text/css">
+  <script src="js/test.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>主要プロトコル</h1>
+    <p id="menu">menu</p> <!-- メニュー表示切替 -->
+  </header>
+
+  <!-- ナビゲーションメニュー -->
+  <nav id="nav" class="navi">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="osi_TCPIP.html">OSI参照モデル・TCP/IP基礎</a></li>
+      <li><a href="layer_yakuwari.html">各層ごとの役割</a></li>
+	  <li><a href="kanrensouti.html">関連装置</a></li>
+	  <li><a href="protocol.html">主要プロトコル</a></li>
+	  <li><a href="keisan.html">伝送効率（計算）</a></li>
+	  <li><a href="test_kakunin.html">確認テスト</a></li>
+    </ul>
+  </nav>
+
+  <!-- メニュー背景 -->
+  <div id="back" class="menu-background"></div>
+
+  <!-- 以下、必要に応じて main などを追加 -->
+  <main>
+	<article>
+		<h2>今回学ぶこと</h2>
+		<p>✓OSI参照モデルやTCP/IPモデルで使用されるプロトコル<br>
+		✓プロトコルの役割<br>
+		</p>
+	</article>
+
+	<section>
+		<h3></h3>
+		<p>プロトコルとは、データのやりとりをする上での決まり事のことを指す。<br>
+			各層にプロトコルが定められている。
+		</p>
+		<iframe src="https://scratch.mit.edu/projects/1203702055/embed" allowtransparency="true" width="776" height="643.2" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+		<p>
+			トランスポート層で信頼性の高い通信を提供する「TCP」と速度優先で通信をする「UDP」について学んでいこう
+		</p>
+	</section>
+
+	<article>
+		<h2>IPについて</h2>
+		<p>教科書P36～<br>
+			IPは複数のネットワークをまたいだやりとりができる<br>
+			IPはOSI参照モデルのネットワーク層に対応するプロトコルで、
+			IPv4アドレスの長さは32ビット、IPv6アドレスの長さは128ビットである。現在はIPv6のほうが主流である。<br>
+			IPv4アドレスは「ネットワーク部」と「ホスト部」で構成される。<br>
+			IPはコネクションレス型のプロトコルであり、通信の信頼性を保証しない。<br>
+		
+		</p>
+		<section>
+			<h3></h3>
+			<p></p>
+			
+			
+		</section>
+	</article>
+
+	<article>
+		<h2>TCPについて</h2>
+		<p>教科書P38～、P90～<br>
+			信頼性の高い通信を提供するとは、どんなことをしていると思いますか。TCPが接続を確立するとき、みなさんが友達と待ち合わせするときのようなやりとりに似ています。<br>
+			TCPは下記の図のように3回のやりとりで接続を確立するため、スリーウェイハンドシェイクと呼ばれます。
+			<img src="img/1.png" alt="スリーウェイハンドシェイク" width="600"><br>
+			また、接続を終了するときは、4回のやりとりで、それぞれが終了の合図を送る必要があります。
+			<img src="img/5.png" alt="接続終了" width="600">
+		
+		</p>
+
+		
+		<section>
+			<h3></h3>
+			<p></p>
+			<p>始める場合は緑の旗を押してください。</p>
+			<iframe src="https://scratch.mit.edu/projects/1193312975/embed" allowtransparency="true" width="776" height="643.2" frameborder="0" scrolling="no" allowfullscreen></iframe>
+		</section>
+	</article>
+	<article>
+		<h2>UDPについて</h2>
+		<p>教科書P39～<br>
+			動画を視聴するときや、オンラインゲームをしている最中に画面が固まったり、動きが遅くなった経験はありませんか。<br>
+			<br>
+			オンラインゲームや動画に関しては、UDPという速度重視のプロトコルが使用されています。<br>
+			速度重視のため、TCPとは違い確認作業を行いません。信頼性には欠けますが、その分リアルタイム性に優れています。
+			
+		</p>
+		<iframe src="https://scratch.mit.edu/projects/1209159735/embed" allowtransparency="true" width="776" height="643.2" frameborder="0" scrolling="no" allowfullscreen></iframe>
+		<p></p>
+		
+	</article>
+  </main>
+
+</body>
+</html>

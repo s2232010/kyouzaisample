@@ -1,0 +1,281 @@
+/* @charset "utf-8";
+body {
+    background-color: #ffffff;
+    font-family: "メイリオ";
+    }
+header {
+    height: 180px;
+    width: 1000px;
+	background-color: #fbfbfb;
+}
+header h1 {
+    height: 100px;
+    width: 900px;
+    color: #002b82;    メニュー項目の背景色(濃い赤色) 
+    display: inline-block;
+    font-size: 3em;
+    font-family: "ヒラギノ明朝";
+    border-style: solid;
+    border-color: #21711300;
+    margin-block-start: 0.67em;
+    margin-block-end: 1em;
+    margin-inline-start: 50px                                                                       px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+header p {
+    display: block;
+    color: #002b82;
+    border-style: none;
+    border-color: #21711300;枠
+    margin-inline-start: 50px;
+}
+nav {
+	height: 30px;
+    width: 810px;
+	background-color: #F7F66B;
+}
+
+h1 {
+    height: 30px;
+    width: 700px;
+    color: #000000;
+    display: block;
+    float: none;
+    font-size: 2em;
+    border-style: solid;
+    border-color: #66666600;
+    margin-top: 0em;
+    margin-inline-start: 20px;
+    font-weight: bold;
+}
+
+.big_box{
+    height: 950px;
+    width: 1250px;
+}
+main{
+    height: 850px;
+    width: 1050px;
+    background-color: #e0eaff;
+    float: left;
+}
+.r_aside {
+    height: 550px;
+    width: 180px;
+    background-color: #002b82;
+    float: right;
+}
+
+article {
+    height: 400px;
+    width: 1000px;
+    background-color: #ffffff;
+    margin-top: 1em;
+    margin-left: 10px;
+}
+section {
+    height: 200px;
+    width: 250px;
+    background-color: #002b82;
+    margin-inline-start: 10px;
+    float: left;
+}
+
+section p{
+    color: #ffffff;
+    margin-inline-start: 10px;
+}
+section img{
+    background-color: #ffffff;
+}
+
+aside {
+    height: 100px;
+    width: 160px;
+    background-color: #ffffff;
+    margin-top: 1em;
+    margin-left: 0.6em;
+}
+footer {
+    height: 70px;
+    width: 810px;
+    background-color: #ffffff;
+    float: left;
+}
+
+
+img{
+	width:100%;
+}
+.logo{
+	width: 10%;
+    display: inline-block;
+}
+
+
+
+.navi {
+  background: #0bd;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 0; 
+  transition: 0.2s;
+  z-index: 100;
+}
+
+.open-menu {
+  width: 50%;  
+}
+
+nav ul {
+  padding: 50px 20px;
+}
+nav li {
+  list-style: none;
+  text-align: left;
+  padding: 10px 0;
+}
+nav li a {
+  display: block;
+}
+
+.menu-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  background: black;
+  opacity: 0.8;
+  z-index: 50;
+}
+
+.open {
+  width: 100%;
+  height: 100%;
+} 
+*/
+
+
+@charset "utf-8";
+
+body {
+  background-color: #ffffff;
+  font-family: "メイリオ";
+  margin: 0;
+}
+
+/* ヘッダー */
+header {
+  background-color: #fbfbfb;
+  padding: 20px;
+}
+header h1 {
+  color: #002b82;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* メニューボタン（右上に固定） */
+#menu {
+  color: #002b82;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 200;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #002b82;
+  border-radius: 5px;
+}
+
+/* メニュー：右側からスライドで表示 */
+.navi {
+  background: #0bd;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: -50%; /* ← 最初は画面外 */
+  width: 50%;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.open-menu {
+  right: 0; /* ← 開いた状態 */
+}
+
+/* メニュー内容 */
+nav ul {
+  padding: 60px 20px;
+}
+nav li {
+  list-style: none;
+  padding: 15px 0;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* 背景（メニュー展開時のマスク） */
+.menu-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  transition: 0.3s;
+}
+.open {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  max-width: 1000px;
+  margin: 100px auto 40px auto;
+  padding: 20px;
+  background-color: #f2f6ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0bd;
+  border-radius: 5px;
+}
+
+h2, h3 {
+  color: #002b82;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}

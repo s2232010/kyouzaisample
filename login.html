@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>ログインページ</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f7f7f7; }
+    form { background: white; padding: 2rem; border-radius: .6rem; max-width: 320px; margin: auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    input { display: block; width: 100%; margin-bottom: 1rem; padding: .6rem; border: 1px solid #ccc; border-radius: .4rem; }
+    button { width: 100%; padding: .6rem; border: none; background: #0b63f6; color: white; border-radius: .4rem; cursor: pointer; }
+    .msg { text-align: center; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2>ログイン</h2>
+    <input type="text" id="username" placeholder="ユーザー名" required />
+    <input type="name" id="name" placeholder="氏名" required />
+    <button type="submit">ログイン</button>
+    <div class="msg" id="msg"></div>
+  </form>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("name").value;
+
+      const res = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, name })
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        msg.textContent = "ログイン成功！";
+        // デモ用：ホームに遷移
+        window.location.href = "/";
+      } else {
+        msg.textContent = "ログイン失敗: " + data.error;
+      }
+    });
+  </script>
+</body>
+</html>

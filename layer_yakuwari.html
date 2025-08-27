@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>教材sample</title>
+  <link href="css/kadai.css" rel="stylesheet" type="text/css">
+  <script src="js/test.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>各階層ごとの役割</h1>
+    <p id="menu">menu</p> <!-- メニュー表示切替 -->
+  </header>
+
+  <!-- ナビゲーションメニュー -->
+  <nav id="nav" class="navi">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="osi_TCPIP.html">OSI参照モデル・TCP/IP基礎</a></li>
+      <li><a href="layer_yakuwari.html">各層ごとの役割</a></li>
+	  <li><a href="kanrensouti.html">関連装置</a></li>
+	  <li><a href="protocol.html">主要プロトコル</a></li>
+	  <li><a href="keisan.html">伝送効率（計算）</a></li>
+	  <li><a href="test_kakunin.html">確認テスト</a></li>
+    </ul>
+  </nav>
+
+  <!-- メニュー背景 -->
+  <div id="back" class="menu-background"></div>
+
+  <!-- 以下、必要に応じて main などを追加 -->
+  <main>
+	<article>
+		<h2>今回学ぶこと</h2>
+		<p>✓各層ごとの役割<br>
+		<!-- ✓層のかかわり<br> -->
+		
+		</p>
+	</article>
+	
+
+	<article>
+		<h2>OSI参照モデルの図</h2>
+		
+		<img src="img/osi.png" alt="OSI参照モデル" width="800">
+		<p>上記の補足説明は以下に記載されています。<br><br>
+			アプリケーション層は、メールやWebなど、ユーザーが直接使う通信サービスを提供する階層。<br>
+			プレゼンテーション層は、文字コード変換・暗号化・圧縮など、データの形式を統一しアプリケーション層に受け渡す<br>
+			セッション層は、サーバやパソコンなどの端末を通信の開始から終了までを管理する階層。<br>
+			トランスポート層は、パケットの順序を入れ替えるなどデータを分割・再構成を担い、エラーがあれば再送して確実に届ける階層。<br>
+			ネットワーク層は、直接つながっていないネットワーク間でパケットを宛先までの経路を決めてデータを届ける階層。<br>
+			データリンク層は、隣接する機器をMACアドレスで識別し、その間の通信を可能にする階層。<br>
+			物理層は、電気信号や光信号に変換して、ケーブルや電波でデータを実際に送る階層。<br>
+		</p>
+	</article>
+
+	<article>
+		<h2>TCP/IP　４階層モデルの図</h2>
+
+		<img src="img/tcpip.png" alt="TCP/IPモデル" width="800">
+		<p>上記の補足説明は以下に記載されています。<br><br>
+			アプリケーション層は、OSI参照モデルの７～５階層の役割を担い、通信の管理からデータの形式を管理し、ユーザが直接利用する通信サービスを提供する階層。<br>
+			トランスポート層は、パケットの順序を入れ替えるなどデータを分割・再構成を担い、エラーがあれば再送して確実に届ける階層。<br>
+			インターネット層は、データの宛先までの経路を決めてデータを届ける階層。<br>
+			ネットワークインタフェース層は、ハードウェアなどで直接接続された相手と通信を可能にする階層。<br>
+		</p>
+	</article>
+
+	<section>
+			<h3>各層の役割</h3>
+			<p>各層の役割をアニメーションで解説します。上記の図をもっと簡単なイメージで説明しています。<br>
+      			シミュレーションは緑の旗を押すと動きます。止めたいときは赤いボタンを押してください。</p>
+			<iframe src="https://scratch.mit.edu/projects/1191007026/embed" allowtransparency="true" width="776" height="643.2" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+	</section>
+  </main>
+
+</body>
+</html>
