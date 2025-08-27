@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>教材sample</title>
+  <link href="css/kadai.css" rel="stylesheet" type="text/css">
+  <script src="js/test.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>OSI参照モデル・TCP/IP基礎</h1>
+    <p id="menu">menu</p> <!-- メニュー表示切替 -->
+  </header>
+
+  <!-- ナビゲーションメニュー -->
+  <nav id="nav" class="navi">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="osi_TCPIP.html">OSI参照モデル・TCP/IP基礎</a></li>
+      <li><a href="layer_yakuwari.html">各層ごとの役割</a></li>
+	  <li><a href="kanrensouti.html">関連装置</a></li>
+	  <li><a href="protocol.html">主要プロトコル</a></li>
+	  <li><a href="keisan.html">伝送効率（計算）</a></li>
+	  <li><a href="test_kakunin.html">確認テスト</a></li>
+    </ul>
+  </nav>
+
+  <!-- メニュー背景 -->
+  <div id="back" class="menu-background"></div>
+
+  <!-- 以下、必要に応じて main などを追加 -->
+  <main>
+	<article>
+		<h2>今回学ぶこと</h2>
+		<p>✓OSI参照モデルの各階層<br>
+		✓TCP/IPモデルの各階層<br>
+		✓層ごとのプロトコル</p>
+	</article>
+
+	<section>
+		<h3>OSI参照モデル</h3>
+    <p>詳細：教科書P12～</p>
+    <p>OSI参照モデルは各層に応じてカバーしている領域に分けられます。<br>
+      「ハードウェア」の1層は機器同士をつなぐケーブル、「ネットワーク」の2〜4層はシステムが構成される際の回線に関する内容、
+      「ソフトウェア」の5〜7層はサーバで動作しているアプリケーションやPCやスマートフォンなどで動作しているソフトやアプリに関連する領域になります。
+    </p>
+		<img src="img/osi.png" alt="OSI参照モデル" width="800">
+    
+	</section>
+
+	<section>
+		<h3>TCP/IPモデル</h3>
+    <p>詳細：教科書P13～</p>
+    <p>TCP/IP4階層モデルは4階層で構成されるシンプルなモデルです。<br>
+      現代のネットワークで中核的な役割を果たす通信手段であり、世界標準的に利用されています。<br>
+      今現在では、OSI参照モデルではなくTCP/IPの方が主流になっています。<br>
+    
+    </p>
+		<img src="img/tcpip.png" alt="TCP/IPモデル" width="800">
+	</section>
+
+  <section>
+		<h3>モデルの比較と層ごとのプロトコル</h3>
+    <p>詳細：教科書P72～</p>
+    <p>コンピュータ上の処理を整理すると、<br>
+      ２つのモデルのオレンジの部分は「通信アプリケーション」「プログラム」に関しての処理、<br>
+      トランスポート層と薄緑色の２層の部分は「OS（オペレーティングシステム）」に関しての処理、<br>
+      緑色の部分は「デバイス」「ドライバ」に関しての処理を行います。<br>
+      各層のプロトコルは下の表を参考にしてください。
+    </p>
+		<img src="img/osi_tcpip_protcol.png" alt="各層のプロトコル" width="800">>
+    
+	</section>
+
+
+  <section>
+    <h3>実際にモデル図を埋めてみよう</h3>
+    <p>各モデルの層が１つずつ上部に出力されます。ドラッグし、空欄のモデル図に当てはめてください。<br>
+      シミュレーションは緑の旗を押すと動きます。止めたいときは赤いボタンを押してください。</p>
+    <iframe src="https://scratch.mit.edu/projects/1192523591/embed" allowtransparency="true" width="776" height="643.2" frameborder="0" scrolling="no" allowfullscreen></iframe>
+  </section>
+
+  
+	
+  </main>
+
+</body>
+</html>
